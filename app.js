@@ -12,6 +12,10 @@ const PORT = process.env.PORT || 8080
 app.use(cors())
 app.use(express.json());
 
+app.get("/", (req, res) => {
+    res.send("<h1>Hello Api Express Modified");
+  });
+
 app.use('/api/1.0',require('./app/routes'))
 
 
